@@ -22,7 +22,7 @@ class Program
         string choice = "";
 
         //Exceeding Requirements:
-        //I added a delete feature that allows he user to remove a journal entry 
+        //I added a delete feature that allows the user to remove a journal entry 
 
         while (choice != "6")
         {

@@ -1,7 +1,7 @@
 /*===============================================================
     FILE: Word.cs
-    PURPOSE: Rrepresents one individual word in the scripture.
-    What is housed here: The word's text, it hidden or visible status, 
+    PURPOSE: Represents one individual word in the scripture.
+    What is housed here: The word's text, it's hidden or visible status, 
     and behaviors for hiding, showing and displaying it.
 =================================================================*/
 
