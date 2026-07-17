@@ -1,9 +1,8 @@
 /*===============================================================
     FILE: Word.cs
-    PURPOSE: Small building block. Every word in the scripture is its own individual
-    object so it can retain its own status.
-    What is housed here: Variable to hold the words and a true/false status tracking
-    if its should show up normally s or as underscores.
+    PURPOSE: Rrepresents one individual word in the scripture.
+    What is housed here: The word's text, it hidden or visible status, 
+    and behaviors for hiding, showing and displaying it.
 =================================================================*/
 
 using System;
@@ -24,6 +23,11 @@ namespace ScriptureMemorizer
         public void Hide()
         {
             _isHidden = true;
+        }
+
+        public void Show()
+        {
+            _isHidden = false;
         }
 
         public bool IsHidden()

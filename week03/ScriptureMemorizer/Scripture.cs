@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace ScriptureMemorizer
 {
     public class Scripture
@@ -15,10 +16,13 @@ namespace ScriptureMemorizer
         private Reference _reference;
         private List<Word> _words;
 
+        private Random _random;
+
         public Scripture(Reference reference, string text)
         {
             _reference = reference;
             _words = new List<Word>();
+            _random = new Random();
 
             string[] splitWords = text.Split(' ');
             foreach (string wordText in splitWords)
@@ -29,7 +33,7 @@ namespace ScriptureMemorizer
 
         public void HideRandomWords(int numberToHide)
         {
-            Random random = new Random();
+
 
             List<int> visibleIndices = new List<int>();
             for (int i = 0; i < _words.Count; i++)
@@ -47,14 +51,43 @@ namespace ScriptureMemorizer
 
             while (hiddenCount < actualToHide)
             {
-                int randomIndex = random.Next(visibleIndices.Count);
+                int randomIndex = _random.Next(visibleIndices.Count);
                 int wordIndex = visibleIndices[randomIndex];
 
                 _words[wordIndex].Hide();
                 visibleIndices.RemoveAt(randomIndex);
                 hiddenCount++;
-            }
         }
+            }
+        public bool ShowRandomHiddenWord()
+        {
+            List<int> hiddenIndices = new List<int>();
+
+            for (int i = 0; i < _words.Count; i++)
+            {
+                if (_words[i].IsHidden())
+                {
+                    hiddenIndices.Add(i);
+                }
+            }
+
+            if (hiddenIndices.Count == 0)
+            {
+                return false;
+
+            }
+                int randomIndex = _random.Next(hiddenIndices.Count);
+                int wordIndex = hiddenIndices[randomIndex];
+
+                _words[wordIndex].Show();
+
+                return true;
+
+            }
+
+
+
+
 
         public string GetDisplayText()
         {
