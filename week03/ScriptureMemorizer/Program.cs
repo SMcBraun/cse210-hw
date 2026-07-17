@@ -2,8 +2,9 @@
     FILE: Program.cs
     PURPOSE: central controler ("the boss") of the entire app from beginning to end.
     What is housed here: Main method, user inputs, loop.
-    Exceeding requirements (creativity): Added a hint feature. The user has 3 hints that can randomly 
-    reveal one hidden word to help with memorization.
+    
+    Exceeding requirements (creativity): Added a hint feature. The user can use up to 3 hints 
+    to randomly reveal one hidden word to help with memorization.
 =================================================================*/
 
 using System;
