@@ -1,9 +1,9 @@
-using System;
+    using System;
 
-class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+        }
     }
-}
