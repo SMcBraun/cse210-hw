@@ -4,7 +4,6 @@
 =================================================================*/
 
 /*=========This creates the plan for each comment==============*/
-using System.Runtime.InteropServices;
 
 public class Comment
 {

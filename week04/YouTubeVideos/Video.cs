@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 /*===============================================================
     FILE: Video.cs
-    PURPOSE: Stores informaitons about one YouTube video
+    PURPOSE: Stores informations about one YouTube video
 =================================================================*/
 
 /*=========This creates the plan for each video ==============*/
@@ -27,7 +27,7 @@ public class Video
     }
 
 
-    /*======This adds one comment ot the video's list======*/
+    /*======This adds one comment to the video's list======*/
     public void AddComment(Comment comment)
     {
         _comments.Add(comment);
